@@ -36,14 +36,14 @@ interface StringArray {
   [index: number]: string;
 }
 
-let arr: StringArray = ["a", "b", "c"];
+let arr2: StringArray = ["a", "b", "c"];
 
 // 딕셔너리 패턴
 interface StringRegexDictionary {
   [key: string]: RegExp;
 }
 
-let obj: StringRegexDictionary = {
+let obj2: StringRegexDictionary = {
   // sth: /abc/
   cssFile: /\.css$/,
   jfFile: /\.js$/,
