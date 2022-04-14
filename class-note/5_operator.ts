@@ -19,7 +19,7 @@ function logMessage2(value: string | number) {
 logMessage2("hello");
 logMessage2(100);
 
-interface Developer {
+interface Student {
   name: string;
   skill: string;
 }
@@ -27,4 +27,18 @@ interface Developer {
 interface Person {
   name: string;
   age: number;
+}
+
+// 유니온 타입
+function askSomeone(someone: Student | Person) {
+  // someone.age
+  // someone.skill
+  someone.name;
+}
+
+// 인터섹션 타입
+function askSomeone2(someone: Student & Person) {
+  someone.age;
+  someone.skill;
+  someone.name;
 }
