@@ -31,4 +31,4 @@ let detailedItem: DetailedDropdown<string> = {
 };
 
 // Best Common Type
-let arr = [1, 2, true];
+let arr = [1, 2, true, "a"];
