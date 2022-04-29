@@ -11,7 +11,7 @@ interface Person {
 let developer: Developer;
 let person: Person;
 // developer = person;
-person = developer;
+// person = developer;
 
 // 함수
 let add = function (a: number) {
