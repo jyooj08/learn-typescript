@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { Chart } from "chart.js";
 
 // utils
@@ -39,17 +39,14 @@ function createSpinnerElement(id: string) {
 let isDeathLoading = false;
 const isRecoveredLoading = false;
 
-/**
- * @typedef {object} CovidSummary
- * @property {Array<object>} Country
- */
+interface CovidSummaryResponse {
+  Countries: any[];
+  Date: string;
+  Global: object;
+  Message: string;
+}
 
-// api
-/**
- *
- * @returns {Promise<CovidSummary>}
- */
-function fetchCovidSummary() {
+function fetchCovidSummary(): Promise<AxiosResponse<CovidSummaryResponse>> {
   const url = "https://api.covid19api.com/summary";
   return axios.get(url);
 }
